@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Eldritch Hunter</title>
     
     <!-- FARCASTER FRAME TAGS -->
@@ -173,6 +173,13 @@
     </div>
     
     <script>
+        // Проверяем мобильное устройство
+        const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+        
+        if (isMobile) {
+            // На мобильных - сразу на игру
+            window.location.href = "/game.html";
+        }
         // Авто-редирект на игру через 10 секунд
         setTimeout(() => {
             window.location.href = '/game.html';
@@ -180,3 +187,5 @@
     </script>
 </body>
 </html>
+
+
