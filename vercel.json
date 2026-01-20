@@ -1,0 +1,44 @@
+﻿{
+  "version": 2,
+  "builds": [
+    {
+      "src": "api/frame.js",
+      "use": "@vercel/node"
+    },
+    {
+      "src": "public/**",
+      "use": "@vercel/static"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/",
+      "dest": "/public/index.html"
+    },
+    {
+      "src": "/game.html",
+      "dest": "/public/game.html"
+    },
+    {
+      "src": "/frame",
+      "dest": "/api/frame"
+    },
+    {
+      "src": "/base-portal",
+      "dest": "/api/frame"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/public/$1"
+    }
+  ],
+  "headers": [
+    {
+      "source": "/api/frame",
+      "headers": [
+        { "key": "Access-Control-Allow-Origin", "value": "*" },
+        { "key": "Content-Type", "value": "text/html" }
+      ]
+    }
+  ]
+}
