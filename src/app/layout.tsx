@@ -18,9 +18,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <meta property="fc:miniapp" content="1.0" />
-        <link rel="fc:miniapp" href="https://my-farcaster-game-gilt.vercel.app" />
-        
+        <meta name="fc:miniapp" content='{"version":"1","imageUrl":"https://my-farcaster-game-gilt.vercel.app/icon.png","button":{"title":"Play Game","action":{"type":"launch_miniapp","url":"https://my-farcaster-game-gilt.vercel.app","name":"Eldritch Hunter","splashImageUrl":"https://my-farcaster-game-gilt.vercel.app/icon.png","splashBackgroundColor":"#000000"}}}' />
         <meta property="og:title" content="Eldritch Hunter" />
         <meta property="og:description" content="Survival shooter game for Farcaster" />
         <meta property="og:image" content="https://my-farcaster-game-gilt.vercel.app/icon.png" />
@@ -28,13 +26,10 @@ export default function RootLayout({
         <meta property="og:image:height" content="400" />
         <meta property="og:url" content="https://my-farcaster-game-gilt.vercel.app" />
         <meta property="og:type" content="website" />
-        
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Eldritch Hunter" />
         <meta name="twitter:description" content="Survival shooter game for Farcaster" />
         <meta name="twitter:image" content="https://my-farcaster-game-gilt.vercel.app/icon.png" />
-        
-        <meta property="fc:frame" content="vNext" />
         <script src="https://cdn.farcaster.xyz/actions.js" async></script>
       </head>
       <body className={inter.className}>
