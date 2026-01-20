@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "../globals.css";
 
@@ -17,23 +17,27 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <meta name="fc:frame" content='{"version":"1","imageUrl":"https://my-farcaster-game-gilt.vercel.app/icon.png","button":{"title":"🎮 Hunt Monsters","action":{"type":"launch_frame","url":"https://my-farcaster-game-gilt.vercel.app","name":"Eldritch Hunter","splashImageUrl":"https://my-farcaster-game-gilt.vercel.app/icon.png","splashBackgroundColor":"#000000"}}}' />
+        {/* ========== FARCASTER/BASE META TAGS ========== */}
+        <meta name="fc:frame" content='"'"'{"version":"1","imageUrl":"https://images.unsplash.com/photo-1620336655055-bd87c5d1d73f?w=1200&h=800&fit=crop","button":{"title":"🎮 Hunt Monsters","action":{"type":"launch_frame","url":"https://my-farcaster-game-gilt.vercel.app","name":"Eldritch Hunter","splashImageUrl":"https://my-farcaster-game-gilt.vercel.app/icon.png","splashBackgroundColor":"#000000"}}}'"'"' />
         
-        <meta name="fc:miniapp" content='{"version":"1","imageUrl":"https://my-farcaster-game-gilt.vercel.app/icon.png","button":{"title":"🎮 Hunt Monsters","action":{"type":"launch_miniapp","url":"https://my-farcaster-game-gilt.vercel.app","name":"Eldritch Hunter","splashImageUrl":"https://my-farcaster-game-gilt.vercel.app/icon.png","splashBackgroundColor":"#000000"}}}' />
+        <meta name="fc:miniapp" content='"'"'{"version":"1","imageUrl":"https://images.unsplash.com/photo-1620336655055-bd87c5d1d73f?w=1200&h=800&fit=crop","button":{"title":"🎮 Hunt Monsters","action":{"type":"launch_miniapp","url":"https://my-farcaster-game-gilt.vercel.app","name":"Eldritch Hunter","splashImageUrl":"https://my-farcaster-game-gilt.vercel.app/icon.png","splashBackgroundColor":"#000000"}}}'"'"' />
         
+        {/* ========== OPEN GRAPH TAGS ========== */}
         <meta property="og:title" content="Eldritch Hunter" />
         <meta property="og:description" content="Survival shooter on Farcaster" />
-        <meta property="og:image" content="https://my-farcaster-game-gilt.vercel.app/icon.png" />
-        <meta property="og:image:width" content="600" />
-        <meta property="og:image:height" content="314" />
+        <meta property="og:image" content="https://images.unsplash.com/photo-1620336655055-bd87c5d1d73f?w=1200&h=800&fit=crop" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="800" />
         <meta property="og:url" content="https://my-farcaster-game-gilt.vercel.app" />
         <meta property="og:type" content="website" />
         
+        {/* ========== TWITTER TAGS ========== */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Eldritch Hunter" />
         <meta name="twitter:description" content="Survival shooter on Farcaster" />
-        <meta name="twitter:image" content="https://my-farcaster-game-gilt.vercel.app/icon.png" />
+        <meta name="twitter:image" content="https://images.unsplash.com/photo-1620336655055-bd87c5d1d73f?w=1200&h=800&fit=crop" />
         
+        {/* ========== OTHER TAGS ========== */}
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <script src="https://cdn.farcaster.xyz/actions.js"></script>
       </head>
